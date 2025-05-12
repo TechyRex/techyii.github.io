@@ -218,7 +218,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 0.5rem; /* Reduced margin to decrease space */
+  margin-bottom: -5rem; /* Reduced margin to decrease space */
 }
 
 .salary-info-card:hover {
@@ -265,11 +265,11 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
   overflow: hidden;
-  margin: 0.2rem auto;
+  margin: 3rem auto;
 }
 
 .form-header {
-  background: linear-gradient(135deg, #7E5AFF, #9A7DFF);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: white;
   padding: 2.5rem;
 }
@@ -353,6 +353,11 @@ footer {
   color: white;
 }
 
+.footer-text  {
+  color: #A0A4B8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 /* Progress Steps */
 .progress-steps {
   display: flex;
