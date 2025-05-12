@@ -119,26 +119,144 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Testimonials */
+/* Testimonials Section */
 .testimonial-section {
-  background: var(--light);
-  padding: 5rem 0;
+  padding: 5rem 2rem;
+  background-color: #f7f8fa;
+}
+
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.testimonial-section p {
+  font-size: 1.1rem;
+  color: #6c757d;
 }
 
 .testimonial-card {
-  background: white;
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 15px;
   padding: 2rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--primary);
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+.testimonial-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonial-header h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.testimonial-header p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.testimonial-rating i {
+  font-size: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+.testimonial-rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.testimonial-card:hover .testimonial-header h5 {
+  color: #007bff; /* Change name color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .testimonial-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-section p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-rating i {
+    font-size: 1.1rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Salary Info Card */
+.salary-info-card {
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.salary-info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.salary-info-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+}
+
+.salary-info-card .salary-amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8f9fa;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.salary-info-card p {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .salary-info-card h3 {
+      font-size: 1.75rem;
+  }
+
+  .salary-info-card .salary-amount {
+      font-size: 2rem;
+  }
+
+  .salary-info-card p {
+      font-size: 1rem;
+  }
+}
+
 
 /* Application Form */
 .application-container {
