@@ -419,7 +419,7 @@
                   <h3 class="mb-3">Application Submitted!</h3>
                   <p class="mb-4">Thank you for applying to TechElevate. We'll review your application and contact you shortly.</p>
                   <p class="mb-4">Want to get more information about the course now?</p>
-                  <a href="https://wa.me/YOUR_PHONE_NUMBER" class="btn btn-success whatsapp-btn mb-3" target="_blank">
+                  <a href="https://wa.me/+2349150725078" class="btn btn-success whatsapp-btn mb-3" target="_blank">
                       <i class="fab fa-whatsapp me-2"></i> Chat on WhatsApp
                   </a>
                   <button type="button" class="btn btn-outline-secondary d-block w-100" data-bs-dismiss="modal">
@@ -468,9 +468,9 @@
                 <div class="col-lg-4 col-md-4 mb-4">
                     <h5 class="text-white mb-3">Contact Info</h5>
                     <ul class="list-unstyled footer-text">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, San Francisco, CA</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +1 (800) 123-4567</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> hello@techelevate.com</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Lagos, Nigeria</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +234 915 0725 078</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> cloudclaxxafrica.com</li>
                         <li><i class="fas fa-clock me-2"></i> Mon-Fri: 9AM - 5PM</li>
                     </ul>
                 </div>
@@ -478,7 +478,7 @@
             <hr class="my-4 bg-secondary">
             <div class="row">
                 <div class="col-md-6 mb-3 mb-md-0">
-                    <p class="text-muted mb-0">© 2023 TechElevate. All rights reserved.</p>
+                    <p class="footer-text mb-0">© 2023 CloudClaxx. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted me-3">Privacy Policy</a>
@@ -572,7 +572,41 @@
 
       </script>
       
-      
+      <script>
+            // Function to show the pop-up after 30 seconds
+            setTimeout(function() {
+              document.getElementById('donationPopup').style.display = 'block';
+              document.getElementById('popupOverlay').style.display = 'block';
+            }, 30000); // 30000 milliseconds = 30 seconds
+        
+            // Function to close the pop-up
+            function closePopup() {
+              document.getElementById('donationPopup').style.display = 'none';
+              document.getElementById('popupOverlay').style.display = 'none';
+            }
+          </script>
+
+</body>
+<!-- Popup Overlay -->
+<div class="popup-overlay" id="popupOverlay"></div>
+
+<!-- WhatsApp Enquiry Popup -->
+<div class="popup" id="donationPopup">
+    <p><strong>Want to get more enquiries?</strong></p>
+    <p>Chat with us on WhatsApp!</p>
+    <a href="https://wa.me/+2349150725078" target="_blank">
+        <button class="whatsapp-btn">
+            <img src="https://img.icons8.com/color/24/000000/whatsapp--v1.png" alt="WhatsApp" style="vertical-align: middle; margin-right: 8px;">
+            Chat on WhatsApp
+        </button>
+    </a>
+    <br>
+    <a class="close-link" onclick="closePopup()">Close</a>
+</div>
+    
+
+
+</html>
   
     
     
@@ -580,5 +614,3 @@
     
     
       
-</body>
-</html>
