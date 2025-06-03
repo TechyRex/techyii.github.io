@@ -573,18 +573,19 @@
       </script>
       
       <script>
-            // Function to show the pop-up after 30 seconds
-            setTimeout(function() {
-              document.getElementById('donationPopup').style.display = 'block';
-              document.getElementById('popupOverlay').style.display = 'block';
-            }, 30000); // 30000 milliseconds = 30 seconds
-        
-            // Function to close the pop-up
-            function closePopup() {
-              document.getElementById('donationPopup').style.display = 'none';
-              document.getElementById('popupOverlay').style.display = 'none';
-            }
-          </script>
+              window.onload = function () {
+        setTimeout(function () {
+            document.getElementById('popupOverlay').style.display = 'block';
+            document.getElementById('donationPopup').style.display = 'block';
+        }, 30000); // 30 seconds = 30000 milliseconds
+    }
+
+    function closePopup() {
+        document.getElementById('popupOverlay').style.display = 'none';
+        document.getElementById('donationPopup').style.display = 'none';
+    }
+ 
+       </script>
 
 </body>
 <!-- Popup Overlay -->
