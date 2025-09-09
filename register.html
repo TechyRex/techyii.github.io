@@ -5,39 +5,265 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Barriers with AI - Register Now</title>
     <style>
-        /* Color theme */
-:root {
-    --primary-purple: #7E5AFF;
-    --primary-orange: #FF7C33;
-    --text-gold: #FFD93D;
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Replace yellow with orange and purple */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #7E5AFF 0%, #2d1b69 100%);
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #FF7C33;
+}
+
+.logo::before {
+    content: "☁️";
+    font-size: 30px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.flyer-section,
+.registration-section {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated glow */
+.flyer-section::before,
+.registration-section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(126, 90, 255, 0.15), transparent 70%);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+}
+
+.weekend-tag {
+    background: rgba(255, 124, 51, 0.25);
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #FF7C33;
+}
+
+.main-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
 .breaking-barriers {
     font-size: 48px;
     font-weight: 900;
     margin-bottom: 20px;
-    background: linear-gradient(45deg, var(--primary-orange), var(--primary-purple));
+    background: linear-gradient(45deg, #7E5AFF, #FF7C33);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-.learning-items h3,
-.countdown h3,
-.form-group label,
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Learning items */
+.learning-items {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.learning-items h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FF7C33;
+}
+
+.learning-items li {
+    padding: 8px 0 8px 25px;
+    position: relative;
+}
+
+.learning-items li::before {
+    content: "🚀";
+    position: absolute;
+    left: 0;
+}
+
+/* Event details */
+.event-details {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
 .event-date {
-    color: var(--primary-orange);
+    font-size: 22px;
+    font-weight: bold;
+    color: #FF7C33;
+    margin-bottom: 10px;
+}
+
+.instructor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.instructor-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #7E5AFF, #FF7C33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.instructor-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.instructor-info p {
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+/* Countdown */
+.countdown {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.countdown h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #FF7C33;
+}
+
+.countdown-timer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.time-unit {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 15px 10px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .time-value {
-    color: var(--primary-purple);
+    font-size: 24px;
+    font-weight: bold;
+    color: #7E5AFF;
 }
 
-.register-btn {
-    background: linear-gradient(45deg, var(--primary-purple), var(--primary-orange));
-    border: none;
+.time-label {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* Registration form */
+.registration-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #FF7C33;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
     border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #7E5AFF;
+    box-shadow: 0 0 10px rgba(126, 90, 255, 0.4);
+}
+
+/* Register button */
+.register-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #7E5AFF, #FF7C33);
+    border: none;
+    border-radius: 12px;
     color: white;
     font-size: 18px;
     font-weight: bold;
@@ -47,39 +273,73 @@
 }
 
 .register-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(255, 124, 51, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(126, 90, 255, 0.3);
 }
 
 .register-btn:disabled {
-    opacity: 0.6;
+    opacity: 0.7;
     cursor: not-allowed;
+    transform: none;
 }
 
-.form-group input:hover,
-.form-group select:hover {
-    border-color: var(--primary-purple);
-    box-shadow: 0 0 8px rgba(126, 90, 255, 0.2);
-}
-
-
-/* Success and error messages */
+/* Messages */
 .success-message {
-    background: rgba(126, 90, 255, 0.15);
-    border: 1px solid var(--primary-purple);
-    color: white;
+    background: rgba(126, 255, 180, 0.15);
+    border: 1px solid #6bcf7f;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
 }
 
 .error-message {
-    background: rgba(255, 124, 51, 0.1);
-    border: 1px solid var(--primary-orange);
-    color: white;
+    background: rgba(255, 124, 51, 0.15);
+    border: 1px solid #FF7C33;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
 }
 
-/* Instructor avatar gradient */
-.instructor-avatar {
-    background: linear-gradient(45deg, var(--primary-orange), var(--primary-purple));
+/* Decorative element */
+.decorative-element {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(126, 90, 255, 0.15), rgba(255, 124, 51, 0.15));
+    top: -40px;
+    right: -40px;
+    animation: float 6s ease-in-out infinite;
 }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .breaking-barriers {
+        font-size: 36px;
+    }
+    
+    .main-title {
+        font-size: 24px;
+    }
+    
+    .countdown-timer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
     </style>
 </head>
