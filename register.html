@@ -471,11 +471,12 @@ body {
     updateCountdown(); // Initial call
 </script>
 
-<!-- Load EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+<!-- ✅ Load the latest EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 <script type="text/javascript">
    (function(){
-      emailjs.init("mWwIf-4oY-PAx48ZY"); // Replace with your EmailJS public key
+      emailjs.init("mWwIf-4oY-PAx48ZY"); // ✅ Your EmailJS Public Key
    })();
 </script>
 
@@ -505,7 +506,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     };
     
     try {
-        // Save to SheetDB
+        // ✅ Save to SheetDB
         const sheetDBResponse = await fetch('https://sheetdb.io/api/v1/iq064awjv2sxh', {
             method: 'POST',
             headers: {
@@ -516,17 +517,19 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
         });
 
         if (!sheetDBResponse.ok) {
-            throw new Error('Failed to save to database');
+            throw new Error('❌ Failed to save to database');
         }
 
-        // Send confirmation email with EmailJS
+        // ✅ Send confirmation email with EmailJS
         await emailjs.send("service_2yk461r", "template_o2ougrx", {
-            to_name: data.fullName,
-            to_email: data.email
-        
+            to_name: data.fullName,  // {{to_name}} in template
+            to_email: data.email     // {{to_email}} in template (set this in "To" field of EmailJS template)
+        }).then((res) => {
+            console.log("✅ Email sent:", res.status, res.text);
+        }).catch((err) => {
+            console.error("❌ EmailJS failed:", err);
+            throw err;
         });
-
-        console.log("✅ Email sent successfully!");
 
         successMsg.style.display = 'block';
         this.reset();
@@ -542,7 +545,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     }
 });
 
-// Animate form inputs
+// ✅ Animate form inputs
 document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('input, select');
     inputs.forEach(input => {
@@ -557,8 +560,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-   
-        
 
 
              
