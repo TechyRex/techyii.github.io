@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Barriers with AI - Register Now</title>
     <style>
-        * {
+     * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,9 +13,9 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #7E5AFF 0%, #2d1b69 100%);
+    background: #0f0f10; /* dark base background */
     min-height: 100vh;
-    color: white;
+    color: #ffffff;
 }
 
 .container {
@@ -37,7 +37,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #FF7C33;
+    color: #7E5AFF; /* purple brand */
 }
 
 .logo::before {
@@ -54,35 +54,17 @@ body {
 
 .flyer-section,
 .registration-section {
-    background: rgba(255, 255, 255, 0.08);
+    background: #1a1a1d; /* dark card */
     border-radius: 20px;
     padding: 30px;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
 
-/* Animated glow */
-.flyer-section::before,
-.registration-section::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(126, 90, 255, 0.15), transparent 70%);
-    animation: pulse 4s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
-}
-
+/* Title and subtitles */
 .weekend-tag {
-    background: rgba(255, 124, 51, 0.25);
+    background: rgba(255, 124, 51, 0.15); /* subtle orange */
     padding: 8px 16px;
     border-radius: 25px;
     font-size: 14px;
@@ -100,31 +82,23 @@ body {
 }
 
 .breaking-barriers {
-    font-size: 48px;
+    font-size: 46px;
     font-weight: 900;
     margin-bottom: 20px;
-    background: linear-gradient(45deg, #7E5AFF, #FF7C33);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #7E5AFF; /* strong purple */
 }
 
 .subtitle {
     font-size: 18px;
     margin-bottom: 30px;
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 /* Learning items */
-.learning-items {
-    text-align: left;
-    margin-bottom: 30px;
-}
-
 .learning-items h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #FF7C33;
+    color: #7E5AFF;
 }
 
 .learning-items li {
@@ -140,7 +114,7 @@ body {
 
 /* Event details */
 .event-details {
-    background: rgba(255, 255, 255, 0.12);
+    background: #141416;
     padding: 20px;
     border-radius: 15px;
     margin-top: 20px;
@@ -149,7 +123,7 @@ body {
 .event-date {
     font-size: 22px;
     font-weight: bold;
-    color: #FF7C33;
+    color: #7E5AFF;
     margin-bottom: 10px;
 }
 
@@ -164,21 +138,12 @@ body {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: linear-gradient(45deg, #7E5AFF, #FF7C33);
+    background: #7E5AFF;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
-}
-
-.instructor-info h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.instructor-info p {
-    opacity: 0.8;
-    font-size: 14px;
+    color: #fff;
 }
 
 /* Countdown */
@@ -190,7 +155,7 @@ body {
 .countdown h3 {
     font-size: 20px;
     margin-bottom: 20px;
-    color: #FF7C33;
+    color: #7E5AFF;
 }
 
 .countdown-timer {
@@ -200,7 +165,7 @@ body {
 }
 
 .time-unit {
-    background: rgba(255, 255, 255, 0.08);
+    background: #1a1a1d;
     padding: 15px 10px;
     border-radius: 10px;
     text-align: center;
@@ -214,15 +179,11 @@ body {
 
 .time-label {
     font-size: 12px;
-    opacity: 0.8;
+    opacity: 0.7;
     margin-top: 5px;
 }
 
 /* Registration form */
-.registration-form {
-    margin-top: 20px;
-}
-
 .form-group {
     margin-bottom: 20px;
 }
@@ -231,7 +192,7 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    color: #FF7C33;
+    color: #FF7C33; /* orange highlight only for labels */
 }
 
 .form-group input,
@@ -239,29 +200,29 @@ body {
     width: 100%;
     padding: 12px 15px;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
+    background: #141416;
     color: white;
     font-size: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: 0.3s ease;
 }
 
 .form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
     border-color: #7E5AFF;
-    box-shadow: 0 0 10px rgba(126, 90, 255, 0.4);
+    box-shadow: 0 0 10px rgba(126, 90, 255, 0.5);
 }
 
 /* Register button */
 .register-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #7E5AFF, #FF7C33);
+    background: #7E5AFF;
     border: none;
     border-radius: 12px;
     color: white;
@@ -273,19 +234,19 @@ body {
 }
 
 .register-btn:hover {
+    background: #6a4ae4;
     transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(126, 90, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(126, 90, 255, 0.3);
 }
 
 .register-btn:disabled {
     opacity: 0.7;
     cursor: not-allowed;
-    transform: none;
 }
 
 /* Messages */
 .success-message {
-    background: rgba(126, 255, 180, 0.15);
+    background: rgba(126, 255, 180, 0.1);
     border: 1px solid #6bcf7f;
     padding: 15px;
     border-radius: 10px;
@@ -295,7 +256,7 @@ body {
 }
 
 .error-message {
-    background: rgba(255, 124, 51, 0.15);
+    background: rgba(255, 124, 51, 0.1);
     border: 1px solid #FF7C33;
     padding: 15px;
     border-radius: 10px;
@@ -310,7 +271,7 @@ body {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background: linear-gradient(45deg, rgba(126, 90, 255, 0.15), rgba(255, 124, 51, 0.15));
+    background: rgba(126, 90, 255, 0.1);
     top: -40px;
     right: -40px;
     animation: float 6s ease-in-out infinite;
@@ -328,7 +289,7 @@ body {
     }
     
     .breaking-barriers {
-        font-size: 36px;
+        font-size: 34px;
     }
     
     .main-title {
@@ -339,6 +300,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 
 
     </style>
