@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breaking Barriers with AI - Register Now</title>
+    <!-- Favicon for browsers -->
+  <link rel="icon" href="Images/favicon.png" type="image/png" sizes="64x64">
+  
+  <!-- Optional: for Apple devices (like iPhones, iPads) -->
+  <link rel="apple-touch-icon" href="Images/favicon.png" sizes="64x64">
     <style>
      * {
     margin: 0;
@@ -309,7 +314,8 @@ body {
     <div class="container">
         <div class="header">
             <div class="logo">
-                <span>CloudClaxx</span>
+                <img src="Images/CloudClaxx.png" alt="CloudClaxx Logo" height="40">
+            </a>
             </div>
         </div>
 
@@ -337,7 +343,9 @@ body {
                 <div class="event-details">
                     <div class="event-date">📅 Saturday 20th September, 2025</div>
                     <div class="instructor">
-                        <div class="instructor-avatar">🎤</div>
+                        <div class="instructor-avatar">
+                            <img src="path/to/your/instructor-photo.jpg" alt="Samson Akinboyewa">
+                        </div>
                         <div class="instructor-info">
                             <h4>SAMSON AKINBOYEWA</h4>
                             <p>Software Engineer</p>
@@ -484,7 +492,7 @@ body {
             
             try {
                 // Replace 'YOUR_SHEETDB_API_URL' with your actual SheetDB API URL
-                const sheetDBResponse = await fetch('YOUR_SHEETDB_API_URL', {
+                const sheetDBResponse = await fetch('https://sheetdb.io/api/v1/iq064awjv2sxh', {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',
