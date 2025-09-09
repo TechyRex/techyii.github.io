@@ -522,9 +522,8 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
         // Send confirmation email with EmailJS
         await emailjs.send("service_2yk461r", "template_o2ougrx", {
             to_name: data.fullName,
-            to_email: data.email,
-            event_date: data.eventDate,
-            whatsapp_link: "https://chat.whatsapp.com/YOUR_WAITLIST_GROUP_LINK"
+            to_email: data.email, // not used in template, but keeps track of recipient
+        
         });
 
         console.log("✅ Email sent successfully!");
