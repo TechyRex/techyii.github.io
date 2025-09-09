@@ -440,8 +440,25 @@ body {
         </div>
     </div>
 
-    <script>
-        // Countdown Timer
+    
+        
+        
+
+
+             
+
+           
+                
+                <!-- Load EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("mWwIf-4oY-PAx48ZY"); // Replace with your EmailJS public key
+   })();
+</script>
+
+<script>
+// Countdown Timer
         function updateCountdown() {
             const eventDate = new Date('2025-09-20T10:00:00').getTime();
             const now = new Date().getTime();
@@ -469,22 +486,6 @@ body {
         setInterval(updateCountdown, 1000);
         updateCountdown(); // Initial call
 
-        
-
-
-             
-
-            </scrtipt>
-                
-                <!-- Load EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("mWwIf-4oY-PAx48ZY"); // Replace with your EmailJS public key
-   })();
-</script>
-
-<script>
 document.getElementById('registrationForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
@@ -552,45 +553,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     }
 });
 
-// Show success message
-                successMsg.style.display = 'block';
-                this.reset(); // Reset form
-                
-                // Scroll to success message
-                successMsg.scrollIntoView({ behavior: 'smooth' });
-                
-            } catch (error) {
-                console.error('Registration error:', error);
-                errorMsg.style.display = 'block';
-                errorMsg.scrollIntoView({ behavior: 'smooth' });
-            } finally {
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.textContent = '🚀 Register Now - It\'s Free!';
-            }
-        });
 
-        // Add some interactive animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate form inputs on focus
-            const inputs = document.querySelectorAll('input, select');
-            inputs.forEach(input => {
-                input.addEventListener('focus', function() {
-                    this.style.transform = 'scale(1.02)';
-                    this.style.transition = 'transform 0.2s ease';
-                });
-                
-                input.addEventListener('blur', function() {
-                    this.style.transform = 'scale(1)';
-                });
-            });
-            
-            // Add floating animation to decorative elements
-            const decorativeElements = document.querySelectorAll('.decorative-element');
-            decorativeElements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.5}s`;
-            });
-        });
 </script>
 
                
