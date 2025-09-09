@@ -441,15 +441,37 @@ body {
     </div>
 
     
-        
-        
+     <script>
+    // Countdown Timer
+    function updateCountdown() {
+        const eventDate = new Date('2025-09-20T10:00:00').getTime();
+        const now = new Date().getTime();
+        const timeLeft = eventDate - now;
 
+        if (timeLeft > 0) {
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-             
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        } else {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+        }
+    }
 
-           
-                
-                <!-- Load EmailJS SDK -->
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
+</script>
+
+<!-- Load EmailJS SDK -->
 <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
 <script type="text/javascript">
    (function(){
@@ -458,34 +480,6 @@ body {
 </script>
 
 <script>
-// Countdown Timer
-        function updateCountdown() {
-            const eventDate = new Date('2025-09-20T10:00:00').getTime();
-            const now = new Date().getTime();
-            const timeLeft = eventDate - now;
-
-            if (timeLeft > 0) {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                document.getElementById('days').textContent = days.toString().padStart(2, '0');
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            } else {
-                document.getElementById('days').textContent = '00';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-            }
-        }
-
-        // Update countdown every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
-
 document.getElementById('registrationForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     
@@ -493,15 +487,12 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     const successMsg = document.getElementById('successMessage');
     const errorMsg = document.getElementById('errorMessage');
     
-    // Hide previous messages
     successMsg.style.display = 'none';
     errorMsg.style.display = 'none';
     
-    // Disable button and show loading
     submitBtn.disabled = true;
     submitBtn.textContent = '🔄 Registering...';
     
-    // Get form data
     const formData = new FormData(this);
     const data = {
         fullName: formData.get('fullName'),
@@ -521,14 +512,14 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ data: data }) // ✅ Correct format for SheetDB
+            body: JSON.stringify({ data: data })
         });
 
         if (!sheetDBResponse.ok) {
             throw new Error('Failed to save to database');
         }
 
-        // ✅ Send confirmation email with EmailJS
+        // Send confirmation email with EmailJS
         await emailjs.send("service_2yk461r", "template_o2ougrx", {
             to_name: data.fullName,
             to_email: data.email,
@@ -538,7 +529,6 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
 
         console.log("✅ Email sent successfully!");
 
-        // Show success message
         successMsg.style.display = 'block';
         this.reset();
         successMsg.scrollIntoView({ behavior: 'smooth' });
@@ -553,9 +543,30 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     }
 });
 
-
+// Animate form inputs
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('input, select');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.style.transform = 'scale(1.02)';
+            this.style.transition = 'transform 0.2s ease';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+});
 </script>
+   
+        
 
+
+             
+
+           
+                
+                
                
     
 </body>
