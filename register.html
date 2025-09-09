@@ -513,61 +513,72 @@ body {
                 }
 
                 // Send confirmation email
-                // Replace with your email service API (like EmailJS, SendGrid, etc.)
-                const emailData = {
-                    to: data.email,
-                    subject: 'Welcome to Breaking Barriers with AI Webinar! 🚀',
-                    html: `
-                        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #7E5AFF, #ff7c33); color: white; padding: 30px; border-radius: 15px;">
-                            <div style="text-align: center; margin-bottom: 30px;">
-                                <h1 style="color: white; margin-bottom: 10px;">🎉 Welcome to the Future of Coding!</h1>
-                                <p style="font-size: 18px; opacity: 0.9;">Breaking Barriers with AI Webinar</p>
-                            </div>
-                            
-                            <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px; margin-bottom: 25px;">
-                                <h2 style="color: #ffd93d; margin-bottom: 15px;">Hi ${data.fullName}! 👋</h2>
-                                <p style="margin-bottom: 15px;">Thank you for registering for our exclusive webinar <strong>"Breaking Barriers with AI"</strong>!</p>
-                                <p style="margin-bottom: 15px;">You're about to embark on an exciting journey where coding becomes stress-free and AI becomes your best coding companion.</p>
-                            </div>
-                            
-                            <div style="background: rgba(255,217,61,0.1); border: 1px solid #ffd93d; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
-                                <h3 style="color: #ffd93d; margin-bottom: 15px;">📅 Event Details:</h3>
-                                <ul style="list-style: none; padding: 0;">
-                                    <li style="padding: 5px 0;"><strong>Date:</strong> Saturday, September 20th, 2025</li>
-                                    <li style="padding: 5px 0;"><strong>Time:</strong> 10:00 AM (We'll send the exact time zone details soon)</li>
-                                    <li style="padding: 5px 0;"><strong>Instructor:</strong> Samson Akinboyewa, Software Engineer</li>
-                                    <li style="padding: 5px 0;"><strong>Platform:</strong> Details coming soon</li>
-                                </ul>
-                            </div>
-                            
-                            <div style="background: rgba(106,207,127,0.1); border: 1px solid #6bcf7f; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
-                                <h3 style="color: #6bcf7f; margin-bottom: 15px;">🚀 What You'll Learn:</h3>
-                                <ul style="list-style: none; padding: 0;">
-                                    <li style="padding: 5px 0;">• Front-End Development with AI assistance</li>
-                                    <li style="padding: 5px 0;">• Back-End Development made simple</li>
-                                    <li style="padding: 5px 0;">• Prompt Engineering for developers</li>
-                                    <li style="padding: 5px 0;">• Stress-free coding techniques</li>
-                                </ul>
-                            </div>
-                            
-                            <div style="text-align: center; background: rgba(255,107,107,0.1); border: 1px solid #ff6b6b; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
-                                <h3 style="color: #ff6b6b; margin-bottom: 15px;">🎯 Join Our Waitlist Group!</h3>
-                                <p style="margin-bottom: 15px;">Don't miss out on exclusive updates, resources, and early access to future events!</p>
-                                <a href="#" style="background: linear-gradient(45deg, #ff6b6b, #ffd93d); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">Join Waitlist Group 🔥</a>
-                            </div>
-                            
-                            <div style="text-align: center; opacity: 0.8; font-size: 14px;">
-                                <p>Questions? Reply to this email or contact us at support@cloudclaxx.com</p>
-                                <p style="margin-top: 15px;">Can't wait to see you at the webinar! 🚀</p>
-                                <p style="margin-top: 10px;"><strong>The CloudClaxx Team</strong></p>
-                            </div>
-                        </div>
-                    `
-                };
+const emailData = {
+    to: data.email,
+    subject: 'Welcome to Breaking Barriers with AI Webinar! 🚀',
+    html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #7E5AFF, #ff7c33); color: white; padding: 30px; border-radius: 15px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="color: white; margin-bottom: 10px;">🎉 Welcome to the Future of Coding!</h1>
+                <p style="font-size: 18px; opacity: 0.9;">Breaking Barriers with AI Webinar</p>
+            </div>
+            
+            <div style="background: rgba(255,255,255,0.1); padding: 25px; border-radius: 10px; margin-bottom: 25px;">
+                <h2 style="color: #ffd93d; margin-bottom: 15px;">Hi ${data.fullName}! 👋</h2>
+                <p style="margin-bottom: 15px;">Thank you for registering for our exclusive webinar <strong>"Breaking Barriers with AI"</strong>!</p>
+                <p style="margin-bottom: 15px;">You're about to embark on an exciting journey where coding becomes stress-free and AI becomes your best coding companion.</p>
+            </div>
+            
+            <div style="background: rgba(255,217,61,0.1); border: 1px solid #ffd93d; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+                <h3 style="color: #ffd93d; margin-bottom: 15px;">📅 Event Details:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 5px 0;"><strong>Date:</strong> Saturday, September 20th, 2025</li>
+                    <li style="padding: 5px 0;"><strong>Time:</strong> 10:00 AM (We'll send the exact time zone details soon)</li>
+                    <li style="padding: 5px 0;"><strong>Instructor:</strong> Samson Akinboyewa, Software Engineer</li>
+                    <li style="padding: 5px 0;"><strong>Platform:</strong> Details coming soon</li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(106,207,127,0.1); border: 1px solid #6bcf7f; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+                <h3 style="color: #6bcf7f; margin-bottom: 15px;">🚀 What You'll Learn:</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 5px 0;">• Front-End Development with AI assistance</li>
+                    <li style="padding: 5px 0;">• Back-End Development made simple</li>
+                    <li style="padding: 5px 0;">• Prompt Engineering for developers</li>
+                    <li style="padding: 5px 0;">• Stress-free coding techniques</li>
+                </ul>
+            </div>
+            
+            <div style="text-align: center; background: rgba(255,107,107,0.1); border: 1px solid #ff6b6b; padding: 20px; border-radius: 10px; margin-bottom: 25px;">
+                <h3 style="color: #ff6b6b; margin-bottom: 15px;">🎯 Join Our Waitlist Group!</h3>
+                <p style="margin-bottom: 15px;">Don't miss out on exclusive updates, resources, and early access to future events!</p>
+                <a href="#" style="background: linear-gradient(45deg, #ff6b6b, #ffd93d); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; display: inline-block;">Join Waitlist Group 🔥</a>
+            </div>
+            
+            <div style="text-align: center; opacity: 0.8; font-size: 14px;">
+                <p>Questions? Reply to this email or contact us at support@cloudclaxx.com</p>
+                <p style="margin-top: 15px;">Can't wait to see you at the webinar! 🚀</p>
+                <p style="margin-top: 10px;"><strong>The CloudClaxx Team</strong></p>
+            </div>
+        </div>
+    `
+};
 
-                // Note: You'll need to implement your preferred email service here
-                // This is a placeholder for email sending
-                console.log('Email would be sent:', emailData);
+// === SEND EMAIL WITH EMAILJS ===
+emailjs.send("service_2yk461r", "template_o2ougrx", {
+    to_email: data.email,
+    to_name: data.fullName,
+    subject: emailData.subject,
+    message_html: emailData.html
+})
+.then(function(response) {
+    console.log("✅ SUCCESS!", response.status, response.text);
+    alert("🎉 Confirmation email sent successfully!");
+}, function(error) {
+    console.log("❌ FAILED...", error);
+    alert("Oops! Something went wrong. Try again later.");
+});
+
                 
                 // Show success message
                 successMsg.style.display = 'block';
@@ -609,5 +620,13 @@ body {
             });
         });
     </script>
+    <!-- Add this in your HTML (before </body>) -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("mWwIf-4oY-PAx48ZY"); // Replace with your EmailJS public key
+   })();
+</script>
+
 </body>
 </html>
